@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.edistynytmobiiliohjelmointi.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.edistynytmobiiliohjelmointi.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.edistynytmobiiliohjelmointi.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.DataFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_data" >
+        <action
+            android:id="@+id/action_dataFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/apiFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.apiFragment"
+        android:label="fragment_api"
+        tools:layout="@layout/fragment_api" >
+        <action
+            android:id="@+id/action_apiFragment_to_commentDetailFragment"
+            app:destination="@id/commentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentDetailFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.CommentDetailFragment"
+        android:label="fragment_comment_detail"
+        tools:layout="@layout/fragment_comment_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_cityWeatherFragment"
+            app:destination="@id/cityWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityWeatherFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.CityWeatherFragment"
+        android:label="fragment_city_weather"
+        tools:layout="@layout/fragment_city_weather" >
+        <argument
+            android:name="latitude"
+            app:argType="float" />
+        <argument
+            android:name="longitude"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/openStreetMapFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.OpenStreetMapFragment"
+        android:label="fragment_open_street_map"
+        tools:layout="@layout/fragment_open_street_map" />
+    <fragment
+        android:id="@+id/basicAuthFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.BasicAuthFragment"
+        android:label="fragment_basic_auth"
+        tools:layout="@layout/fragment_basic_auth" />
+    <fragment
+        android:id="@+id/feedbackSendFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.FeedbackSendFragment"
+        android:label="fragment_feedback_send"
+        tools:layout="@layout/fragment_feedback_send" />
+    <fragment
+        android:id="@+id/feedbackReadFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.FeedbackReadFragment"
+        android:label="fragment_feedback_read"
+        tools:layout="@layout/fragment_feedback_read" />
+    <fragment
+        android:id="@+id/weatherStationFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.WeatherStationFragment"
+        android:label="fragment_weather_station"
+        tools:layout="@layout/fragment_weather_station" />
+    <fragment
+        android:id="@+id/cloudMqttFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.CloudMqttFragment"
+        android:label="fragment_cloud_mqtt"
+        tools:layout="@layout/fragment_cloud_mqtt" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.edistynytmobiiliohjelmointi.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+</navigation>

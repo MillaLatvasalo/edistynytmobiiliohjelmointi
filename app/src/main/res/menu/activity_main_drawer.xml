@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/dataFragment"
+            android:title="Data fragment"
+            />
+        <item
+            android:id="@+id/apiFragment"
+            android:title="API Fragment"
+            />
+        <item
+            android:id="@+id/mapsFragment"
+            android:title="Maps Fragment"
+            />
+        <item
+            android:id="@+id/openStreetMapFragment"
+            android:title="OpenStreetMap Fragment"
+            />
+        <item
+            android:id="@+id/basicAuthFragment"
+            android:title="Basic Auth Fragment"
+            />
+        <item
+            android:id="@+id/feedbackReadFragment"
+            android:title="Feedback Read"
+            />
+        <item
+            android:id="@+id/feedbackSendFragment"
+            android:title="Feedback Send"
+            />
+        <item
+            android:id="@+id/weatherStationFragment"
+            android:title="WeatherStation"
+            />
+        <item
+            android:id="@+id/cloudMqttFragment"
+            android:title="CloudMqtt"
+            />
+        <item
+            android:id="@+id/calendarFragment"
+            android:title="Calendar"
+            />
+    </group>
+</menu>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherStationFragment">
+
+    <TextView
+        android:id="@+id/weatherstationTemperatureText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Waiting data..."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/speedViewPressure"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="79dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weatherstationTemperatureText" />
+
+    <com.github.anastr.speedviewlib.PointerSpeedometer
+        android:id="@+id/speedViewTemperature"
+        android:layout_width="185dp"
+        android:layout_height="185dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/speedViewPressure"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        app:sv_backgroundCircleColor="#595959"
+        app:sv_indicator="NeedleIndicator"
+        app:sv_maxSpeed="50"
+        app:sv_minSpeed="-50"
+        app:sv_unit="℃"
+        app:sv_withTremble="false" />
+
+    <com.github.anastr.speedviewlib.TubeSpeedometer
+        android:id="@+id/speedViewPressure"
+        android:layout_width="185dp"
+        android:layout_height="185dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/speedViewTemperature"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094"
+        app:sv_maxSpeed="1070"
+        app:sv_minSpeed="940"
+        app:sv_speedTextPadding="1dp"
+        app:sv_unit="hPa"
+        app:sv_withTremble="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:text="PRESSURE"
+        app:layout_constraintBottom_toTopOf="@+id/speedViewPressure"
+        app:layout_constraintEnd_toEndOf="@+id/speedViewPressure"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="TEMPERATURE"
+        app:layout_constraintBottom_toTopOf="@+id/speedViewTemperature"
+        app:layout_constraintStart_toStartOf="@+id/speedViewTemperature"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.551" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
